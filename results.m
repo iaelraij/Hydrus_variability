@@ -1,6 +1,3 @@
-% file='H3D2_ERT_season_test1_oct';
-% folder= pwd;
-
 function [v_mean,cumQ,obsN,atmosph,file]=results(file, folder)
 
 fname=[folder '\' file];
