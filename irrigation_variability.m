@@ -62,10 +62,12 @@ fclose(fid);
     fclose(fid);
     
     %run simulation
+    % the user needs to create a text file named level_01.dir and save it in the working folder. The Matlab code will write the name of each simulation to be run in each iteration.
     [level01,message]=fopen([folder '\level_01.dir'],'w');
      fwrite(level01,[folder '\H3D2_' BasicFile '_' num2str(i)]);
     fclose(level01);
     cd(folder)
+    % the Hydrus executable file can be saved in the working folder or the next line can be directed to where the exe file is saved.
     [status,res]=dos([folder '\H2D_CALC.EXE']);
     
     %save results in the total structure
